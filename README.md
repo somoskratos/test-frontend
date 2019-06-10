@@ -39,11 +39,11 @@ GET /empresas/:id/documentos/:id
 E o design no documento do figma: https://www.figma.com/file/RVoviOrwjK3Vhp96aIHIuOTd/Teste-Front-End-Kratos?node-id=1%3A2
 
 ## Como devo entregar o desafio?
-Crie uma branch a partir da branch master deste respositório;
-Implemente o desafio de código;
-Faça um push de sua branch com o desafio implementado;
-Crie um pull request para branch master;
-Envie um email para (vagas@somoskratos.com.br) com o nome de sua branch informando que você concluiu o projeto;
+* Crie uma branch a partir da branch master deste respositório;
+* Implemente o desafio de código;
+* Faça um push de sua branch com o desafio implementado;
+* Crie um pull request para branch master;
+* Envie um email para (vagas@somoskratos.com.br) com o nome de sua branch informando que você concluiu o projeto;
 
 
 ## Restou alguma dúvida?
