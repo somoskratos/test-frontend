@@ -18,12 +18,17 @@ Se você se enquadra nessa idéia os requisitos são:
 Ter disponibilidade para trabalhar em Campo Grande/MS;
 Ter excelente comunicação;
 Conhecer metodologias ágeis;
-Desenvolvimento orientado a testes;
+Conhecimento em desenvolvimento orientado a testes;
 Experiência com VueJS, SASS, Babel, Jest (ou similares);
 
 ## O Desafio:
 
-Criar uma aplicação VueJS que permita visualizar o perfil de nossos clientes. Os dados para consulta estão disponibilizados na api:
+Criar uma aplicação VueJS que permita visualizar o perfil de nossos clientes. 
+
+O design do site vc encotra em:
+https://www.figma.com/file/RVoviOrwjK3Vhp96aIHIuOTd/Teste-Front-End-Kratos
+
+Os dados para consulta estão disponíveis na api:
 
 API Perfil do cliente:
 https://5c0e8a20e1498a001336489e.mockapi.io/api/:endpoint
@@ -43,8 +48,5 @@ E o design no documento do figma: https://www.figma.com/file/RVoviOrwjK3Vhp96aIH
 * Implemente o desafio de código;
 * Faça um push de sua branch com o desafio implementado;
 * Crie um pull request para branch master;
-* Envie um email para (vagas@somoskratos.com.br) com o nome de sua branch informando que você concluiu o projeto;
 
-
-## Restou alguma dúvida?
-Você pode enviar um email para: vagas@somoskratos.com.br
+Boa Sorte! o/
