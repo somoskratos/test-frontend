@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PartnerWidget.vue renders the component 1`] = `<div class="PartnerWidget d-flex flex-column justify-content-center align-items-center text-center"><img height="99px" width="99px"> <span></span></div>`;

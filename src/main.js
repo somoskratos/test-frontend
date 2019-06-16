@@ -9,11 +9,10 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faSearch, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faSearch, faSignOutAlt);
-Vue.component("font-awesome-icon", FontAwesomeIcon);
-
 Vue.config.productionTip = false;
 
+library.add(faSearch, faSignOutAlt);
+Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(BootstrapVue);
 
 new Vue({

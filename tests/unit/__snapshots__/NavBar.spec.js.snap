@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar.vue renders the component 1`] = `
+<b-navbar fixed="top" toggleable="lg" class="NavBar">
+  <b-navbar-brand href="#" class="__Logo d-flex m-0"><img src="/Logo.svg" height="22.85px" width="100px"></b-navbar-brand>
+  <b-navbar-nav class="ml-auto">
+    <b-nav-item href="http://www.google.com/search?source=hp&amp;ei=LOAFXey8Cc3C5OUPgM2MqAo&amp;q=kratos+cg+ms&amp;oq=kratos+cg+ms" class="__Logout d-flex">
+      <font-awesome-icon icon="sign-out-alt"></font-awesome-icon>
+    </b-nav-item>
+  </b-navbar-nav>
+</b-navbar>
+`;

@@ -1,6 +1,6 @@
 <template>
   <b-navbar class="NavBar" fixed="top" toggleable="lg">
-    <b-navbar-brand class="__Logo d-flex m-0" href="#">
+    <b-navbar-brand class="__Logo d-flex m-0" href="/">
       <img src="/Logo.svg" height="22.85px" width="100px">
     </b-navbar-brand>
 
