@@ -1,15 +1,19 @@
 <template>
   <div id="app">
     <NavBar/>
-    <router-view />
+    <Wrapper>
+      <router-view />
+    </Wrapper>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar";
+import Wrapper from "@/components/Wrapper";
 export default {
   components: {
-    NavBar
+    NavBar,
+    Wrapper
   }
 }
 </script>
