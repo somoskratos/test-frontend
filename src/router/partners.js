@@ -6,30 +6,31 @@ import PartnersDocumentsView from "@/views/partners/DocumentsView.vue";
 
 export default {
   path: "empresas",
+  name: "partners",
   component: Partners,
   children: [
     {
       path: "",
-      redirect: "lists"
+      redirect: "lista"
     },
     {
       path: "lista",
-      name: "partners.list",
+      name: "empresas.lista",
       component: PartnersList
     },
     {
       path: ":id",
-      name: "partners.view",
+      name: "empresas.view",
       component: PartnersView
     },
     {
       path: ":id/documentos",
-      name: "partners.documents",
+      name: "empresas.documentos",
       component: PartnersDocuments
     },
     {
-      path: ":id/documentos/:id",
-      name: "partners.documents.view",
+      path: ":id/documentos/:documentId",
+      name: "empresas.documentos.view",
       component: PartnersDocumentsView
     }
   ]

@@ -3,7 +3,7 @@
     <router-link
       tag="div"
       path="Lista de empresas"
-      :to="{ name: 'empresas.list' }"
+      :to="{ path: '/empresas' }"
       class="__Link d-flex flex-column justify-content-center align-items-center"
     >
     Empresas
