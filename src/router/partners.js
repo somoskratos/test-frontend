@@ -6,7 +6,6 @@ import PartnersDocumentsView from "@/views/partners/DocumentsView.vue";
 
 export default {
   path: "empresas",
-  name: "partners",
   component: Partners,
   children: [
     {

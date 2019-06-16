@@ -1,7 +1,8 @@
 <template>
   <div class="PartnerWidget d-flex flex-column justify-content-center align-items-center text-center">
-    <img :src="img" :alt="img" height="99px" width="99px">
-    <span>{{name}}</span>
+    <!-- Lorempixel down! -->
+    <img :src="partner.logo.replace('lorempixel', 'loremflickr')" :alt="partner.name" height="99px" width="99px">
+    <span>{{partner.name}}</span>
   </div>
 </template>
 
@@ -9,8 +10,7 @@
 export default {
   name: "PartnerWidget",
   props: {
-    img: String,
-    name: String
+    partner: Object
   }
 };
 </script>

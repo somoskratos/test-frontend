@@ -2,7 +2,6 @@
   <div id="app">
     <NavBar />
     <Wrapper>
-      main
       <router-view />
     </Wrapper>
   </div>
@@ -11,10 +10,17 @@
 <script>
 import NavBar from "@/components/NavBar";
 import Wrapper from "@/components/Wrapper";
+import { mapActions } from  "vuex";
 export default {
   components: {
     NavBar,
     Wrapper
+  },
+  methods: {
+    ...mapActions(['getPartners'])
+  },
+  beforeMount() {
+    return this.getPartners(); 
   }
 }
 </script>

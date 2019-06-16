@@ -3,7 +3,7 @@ import Router from "vue-router";
 import partners from "./partners";
 import dashboard from "./dashboard";
 import Dashboard from "@/views/Dashboard";
-import Page from '@/views/Page';
+import Page from "@/views/Page";
 
 Vue.use(Router);
 
@@ -12,11 +12,11 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '',
+      path: "",
       component: Page,
       children: [
         {
-          path: '/',
+          path: "/",
           component: Dashboard
         },
         dashboard,
@@ -25,4 +25,3 @@ export default new Router({
     }
   ]
 });
-
