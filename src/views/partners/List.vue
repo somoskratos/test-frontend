@@ -4,7 +4,20 @@
       <span class="__title">Suas Empresas</span>
       <p>Clique em uma de suas empresas para acessar seu perfil no Contador Online</p>
     </div>
-    <PartnerWidget v-for="partner in partners" :key="partner.id" :partner="partner"/>
+    <div class="__Partners d-flex flex-column justify-content-center align-items-center">
+      <div v-for="x in 10" class="--Content">
+        <div class="--FirstColumn d-flex flex-column justify-content-center align-items-center">
+          <PartnerWidget v-if="x % 2 !== 0" class="h-100 mb-16" :partner="partnersSliced(x)[0]" />
+          <PartnerWidget v-if="x % 2 !== 0" class="h-100" :partner="partnersSliced(x)[1]" />
+          <PartnerWidget v-if="x % 2 === 0" class="h-100" :partner="partnersSliced(x)[2]" />
+        </div>
+        <div class="--SecondColumn d-flex flex-column justify-content-center align-items-center">
+          <PartnerWidget v-if="x % 2 === 0" class="h-100 mb-16" :partner="partnersSliced(x)[0]" />
+          <PartnerWidget v-if="x % 2 === 0" class="h-100" :partner="partnersSliced(x)[1]" />
+          <PartnerWidget v-if="x % 2 !== 0" class="h-100" :partner="partnersSliced(x)[2]" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -17,7 +30,21 @@ export default {
     PartnerWidget
   },
   computed: {
-    ...mapState(['partners'])
+    ...mapState(['partners']),
+  },
+  methods: {
+    partnersSliced(x) {
+      return this.partners.slice(x, x + 3);
+    },
+    partnerWidgetClass(id) {
+      if (id % 3 === 0) {
+        return '__ThirdPartner';
+      } else if (id % 2 === 0) {
+        return '__SecondPartner';
+      } else {
+        return '__FirstPartner';
+      }
+    }
   }
 };
 </script>
@@ -61,6 +88,34 @@ $screen-sm-max: 578px;
 
       color: #797979;
       margin-top: 23px;
+    }
+  }
+  .__Partners {
+    min-width: 100%;
+    .--Content {
+      @media screen and (min-width: #{$screen-sm-max}) {
+        display: flex; 
+        flex-direction: row;
+        margin-bottom: 15px !important;
+      }
+      @media screen and (max-width: #{$screen-sm-max}) {
+        display: flex; 
+        flex-direction: column;
+        min-width: 100%;
+        .PartnerWidget {
+          margin-bottom: 15px !important;
+        }
+      }
+    }
+    .--FirstColumn {
+      @media screen and (min-width: #{$screen-sm-max}) {
+        margin-right: 15px;
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+      }
     }
   }
 }
