@@ -8,9 +8,9 @@
   >
     <!-- Lorempixel down! -->
     <div class="--Header d-flex flex-row">
-      <font-awesome-icon icon="stamp" :style="document.valid ? {color: '#14CB93'} : {color: '#FFB11B'}"/>
-      <div class="--Expired" :style="document.valid ? [{backgroundColor: '#14CB93'}] : [{backgroundColor: '#FFB11B'}]">
-        {{document.valid ? 'Válido' : 'Inválido'}}
+      <font-awesome-icon icon="stamp" :style="document.vencido ? {color: '#14CB93'} : {color: '#FFB11B'}"/>
+      <div class="--Expired" :style="document.vencido ? [{backgroundColor: '#14CB93'}] : [{backgroundColor: '#FFB11B'}]">
+        {{document.vencido ? 'Válido' : 'Inválido'}}
       </div>
     </div>
     <span class="--Name">{{document.nome}}</span>
