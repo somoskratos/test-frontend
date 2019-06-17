@@ -7,11 +7,28 @@ import "./assets/scss/import.scss";
 import "./assets/scss/global.scss";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faSearch, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSearch,
+  faSignOutAlt,
+  faStamp,
+  faEnvelope,
+  faPhoneVolume,
+  faIdCard,
+  faHome
+} from "@fortawesome/free-solid-svg-icons";
 
 Vue.config.productionTip = false;
 
-library.add(faSearch, faSignOutAlt);
+library.add(
+  faSearch,
+  faSignOutAlt,
+  faStamp,
+  faEnvelope,
+  faPhoneVolume,
+  faIdCard,
+  faHome
+);
+
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(BootstrapVue);
 

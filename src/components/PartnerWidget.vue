@@ -5,7 +5,7 @@
       :to="{ name: 'empresas.view', params: { id: partner.id } }"
    class="PartnerWidget d-flex flex-column justify-content-center align-items-center text-center">
     <!-- Lorempixel down! -->
-    <img :src="partner.logo.replace('lorempixel', 'loremflickr')" :alt="partner.name" height="99px" width="99px">
+    <img :src="partner.logo.replace('lorempixel', 'loremflickr')" :alt="partner.nomeFantasia" height="99px" width="99px">
     <span>{{partner.nomeFantasia}}</span>
   </router-link>
 </template>
@@ -34,10 +34,8 @@ $screen-sm-max: 578px;
   }
   img {
     border-radius: 50%;
+    padding: 5px;
     border: 2px solid #E7E7E7;
-    @media screen and (max-width: #{$screen-sm-max}) {
-
-    }
   }
   span {
     margin-top: 18.55px;

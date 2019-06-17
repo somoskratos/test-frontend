@@ -12,7 +12,10 @@ export const getPartners = async () => {
 export const getPartner = async partnerId => {
   const partner = (await api.get(`/empresas/${partnerId}`)).data;
   const partnerDocuments = (await api.get(`/empresas/${partnerId}/documentos`)).data;
-  return { ...partner, documents: partnerDocuments};
+  return {
+    ...partner,
+    documents: partnerDocuments
+  };
 };
 
 export const getPartnerDocument = async (partnerId, documentId) => {
