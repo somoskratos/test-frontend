@@ -1,9 +1,13 @@
 <template>
-  <div class="PartnerWidget d-flex flex-column justify-content-center align-items-center text-center">
+<router-link
+      tag="div"
+      path="Lista de empresas"
+      :to="{ name: 'empresas.view', params: { id: partner.id } }"
+   class="PartnerWidget d-flex flex-column justify-content-center align-items-center text-center">
     <!-- Lorempixel down! -->
     <img :src="partner.logo.replace('lorempixel', 'loremflickr')" :alt="partner.name" height="99px" width="99px">
     <span>{{partner.nomeFantasia}}</span>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -18,6 +22,7 @@ export default {
 <style lang="scss" scoped>
 $screen-sm-max: 578px;
 .PartnerWidget {
+  cursor: pointer;
   background: #FFFFFF;
   border: 1px solid #ECECEC;
   box-sizing: border-box;
@@ -30,6 +35,9 @@ $screen-sm-max: 578px;
   img {
     border-radius: 50%;
     border: 2px solid #E7E7E7;
+    @media screen and (max-width: #{$screen-sm-max}) {
+
+    }
   }
   span {
     margin-top: 18.55px;

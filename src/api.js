@@ -9,14 +9,12 @@ export const getPartners = async () => {
   localStorage.setItem("partners", JSON.stringify(partners));
 };
 
-export const getPartner = async partner => {
-  return (await api.get(`/empresas/${partner.id}`)).data;
+export const getPartner = async partnerId => {
+  const partner = (await api.get(`/empresas/${partnerId}`)).data;
+  const partnerDocuments = (await api.get(`/empresas/${partnerId}/documentos`)).data;
+  return { ...partner, documents: partnerDocuments};
 };
 
-export const getPartnerDocuments = async partner => {
-  return (await api.get(`/empresas/${partner.id}/documentos`)).data;
-};
-
-export const getPartnerDocument = async (partner, document) => {
-  return (await api.get(`/empresas/${partner.id}/documentos/${document.id}`)).data;
+export const getPartnerDocument = async (partnerId, documentId) => {
+  return (await api.get(`/empresas/${partnerId}/documentos/${documentId}`)).data;
 };
