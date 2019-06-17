@@ -86,7 +86,7 @@ $screen-sm-max: 578px;
       margin-right: 23px;
       border-radius: 50%;
       padding: 5px;
-      border: 2px solid rgb(126, 92, 92);
+      border: 2px solid #E7E7E7;
       min-height: 224px;
       height: 224px;
       min-width: 224px;
