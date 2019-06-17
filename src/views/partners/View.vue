@@ -1,7 +1,8 @@
 <template>
+<!-- TODO BUG DONT EXISTS ACTUAL PARTNER YET FOR REPLACE DATA. -->
   <div class="PartnersView d-flex flex-column align-items-start">
     <div class="__PartnerContent">
-      <img :src="actualPartner.logo.replace('lorempixel', 'loremflickr')" :alt="actualPartner.nomeFantasia">
+      <img :src="actualPartner.logo ? actualPartner.logo.replace('lorempixel', 'loremflickr') : null" :alt="actualPartner.nomeFantasia">
       <div class="--Data">
         <div class="--Header d-flex flex-row">
           <span>{{actualPartner.nomeFantasia}}</span>
@@ -16,11 +17,11 @@
         <div class="--DocPhoneMail d-flex flex-row align-items-start">
           <div class="--Doc">
             <font-awesome-icon icon="id-card"/>
-            <span>{{actualPartner.cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5")}}</span>
+            <span>{{actualPartner.cnpj ? actualPartner.cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5") : null}}</span>
           </div>
           <div class="--Phone">
             <font-awesome-icon icon="phone-volume"/>
-            <span>{{actualPartner.telefone.replace(/^(\d{2})(\d{4})(\d{4})/, "($1) $2-$3")}}</span>
+            <span>{{actualPartner.telefone ? actualPartner.telefone.replace(/^(\d{2})(\d{4})(\d{4})/, "($1) $2-$3") : null}}</span>
           </div>
           <div class="--Main">
             <font-awesome-icon icon="envelope"/>
@@ -44,7 +45,6 @@ export default {
   },
   mounted() {
     this.setActualPartner(this.$route.params.id)
-    console.log(this.actualPartner);
   }
 };
 </script>
@@ -60,13 +60,17 @@ $screen-sm-max: 578px;
     display: flex;
     flex-direction: row;
     width: 100%;
-    @media screen and (max-width: #{$screen-sm-max}) {}
+    @media screen and (max-width: #{$screen-sm-max}) {
+      flex-direction: column;
+    }
     img {
       margin-right: 23px;
       border-radius: 50%;
       padding: 5px;
       border: 2px solid #E7E7E7;
+      min-height: 224px;
       height: 224px;
+      min-width: 224px;
       width: 224px;
       @media screen and (max-width: #{$screen-sm-max}) {}
     }
@@ -86,7 +90,8 @@ $screen-sm-max: 578px;
       background: #FFFFFF;
       border: 1px solid #E7E7E7;
       box-sizing: border-box;
-      @media screen and (max-width: #{$screen-sm-max}) {}
+      @media screen and (max-width: #{$screen-sm-max}) {
+      }
       .--Header {
         margin-bottom: 40px;
         span {
@@ -137,6 +142,10 @@ $screen-sm-max: 578px;
         }
       }
       .--DocPhoneMail {
+        @media screen and (max-width: #{$screen-sm-max}) {
+          display: flex;
+          flex-direction: column;
+        }
         svg {
           font-size: 15px;
           color: #797979;
