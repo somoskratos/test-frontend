@@ -28,7 +28,7 @@ export default {
       component: PartnersDocuments
     },
     {
-      path: ":id/documentos/:documentId",
+      path: ":partnerId/documentos/:documentId",
       name: "empresas.documentos.view",
       component: PartnersDocumentsView
     }

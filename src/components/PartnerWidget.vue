@@ -1,7 +1,7 @@
 <template>
 <router-link
       tag="div"
-      path="Lista de empresas"
+      path="Dados da empresa"
       :to="{ name: 'empresas.view', params: { id: partner.id } }"
    class="PartnerWidget d-flex flex-column justify-content-center align-items-center text-center">
     <!-- Lorempixel down! -->

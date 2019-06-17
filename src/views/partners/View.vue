@@ -32,13 +32,28 @@
         </div>
       </div>
     </div>
+    <div v-if="actualPartner.documents" class="__Documents d-flex flex-column">
+      <span class="--title">Documentos</span>
+      <div class="--List d-flex flex-row flex-wrap justify-content-between">
+        <DocumentWidget v-for="document in actualPartner.documents"
+        :key="document.id"
+        :document="document"
+        :partnerId="actualPartner.id"
+      />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import DocumentWidget from '@/components/DocumentWidget';
+
 export default {
   name: 'PartnersView',
+  components: {
+    DocumentWidget
+  },
   computed: {
     ...mapState(['actualPartner'])
   },
@@ -56,7 +71,7 @@ $screen-sm-max: 578px;
 .PartnersView {
   padding: 48px 48px 48px 72px;
   @media screen and (max-width: #{$screen-sm-max}) {
-    padding: 129px 20px 31px;
+    padding: 129px 20px 20px;
   }
   .__PartnerContent {
     display: flex;
@@ -194,6 +209,32 @@ $screen-sm-max: 578px;
             margin-bottom: 33px;
           }
         }
+      }
+    }
+  }
+  .__Documents {
+    text-align: left;
+    margin-top: 51px;
+    width: 100%;
+    @media screen and (max-width: #{$screen-sm-max}) {
+      margin-top: 33px;
+    }
+    .--title {
+      margin-bottom: 17px;
+      font-family: Encode Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 17px;
+      line-height: 19px;
+      letter-spacing: 0.503704px;
+      color: #3F3F3F;
+    }
+    .--List {
+      @media screen and (max-width: #{$screen-sm-max}) {
+        flex-direction: column !important;
+      }
+      .DocumentWidget:last-child {
+        margin-bottom: 0;
       }
     }
   }
