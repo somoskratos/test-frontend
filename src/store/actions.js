@@ -1,4 +1,4 @@
-import { getPartners, getPartner } from "../api";
+import { getPartners, getPartner, getPartnerDocument } from "../api";
 export default {
   getPartners() {
     return getPartners();
@@ -7,7 +7,8 @@ export default {
     const partner = await getPartner(partnerId);
     commit("SET_ACTUAL_PARTNER", partner);
   },
-  setActualDocument({ commit }, document) {
+  setActualDocument: async ({ commit }, { partnerId, documentId }) => {
+    const document = await getPartnerDocument(partnerId, documentId);
     commit("SET_ACTUAL_DOCUMENT", document);
   }
 };

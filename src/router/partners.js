@@ -1,7 +1,6 @@
 import Partners from "@/views/partners/Partners.vue";
 import PartnersList from "@/views/partners/List.vue";
 import PartnersView from "@/views/partners/View.vue";
-import PartnersDocuments from "@/views/partners/Documents.vue";
 import PartnersDocumentsView from "@/views/partners/DocumentsView.vue";
 
 export default {
@@ -21,11 +20,6 @@ export default {
       path: ":id",
       name: "empresas.view",
       component: PartnersView
-    },
-    {
-      path: ":id/documentos",
-      name: "empresas.documentos",
-      component: PartnersDocuments
     },
     {
       path: ":partnerId/documentos/:documentId",

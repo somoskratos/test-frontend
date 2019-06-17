@@ -36,10 +36,10 @@
       <span class="--title">Documentos</span>
       <div class="--List d-flex flex-row flex-wrap justify-content-between">
         <DocumentWidget v-for="document in actualPartner.documents"
-        :key="document.id"
-        :document="document"
-        :partnerId="actualPartner.id"
-      />
+          :key="document.id"
+          :document="document"
+          :partnerId="actualPartner.id"
+        />
       </div>
     </div>
   </div>

@@ -1,8 +1,9 @@
 <template>
   <router-link
     tag="div"
+    v-if="document.id && partnerId"
     path="Dados do documento"
-    :to="{ name: 'empresas.documentos.view', params: { partnerId: partnerId, documentId: document.id } }"
+    :to="{ name: 'empresas.documentos.view', params: {partnerId: partnerId, documentId: document.id } }"
     class="DocumentWidget d-flex flex-column justify-content-start align-items-start text-left"
   >
     <!-- Lorempixel down! -->

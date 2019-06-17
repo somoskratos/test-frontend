@@ -12,5 +12,6 @@ export default {
 
 <style lang="scss" scoped>
 .Partners {
+  min-height: 100%;
 }
 </style>
