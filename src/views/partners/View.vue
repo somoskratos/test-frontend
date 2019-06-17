@@ -5,14 +5,16 @@
       <img :src="actualPartner.logo ? actualPartner.logo.replace('lorempixel', 'loremflickr') : null" :alt="actualPartner.nomeFantasia">
       <div class="--Data">
         <div class="--Header d-flex flex-row">
-          <span>{{actualPartner.nomeFantasia}}</span>
+          <div class="--FantasyName">
+            <span>{{actualPartner.nomeFantasia}}</span>
+          </div>
           <div class="--SocialName ml-auto">
             {{actualPartner.razaoSocial}}
           </div>
         </div>
         <div class="--Address d-flex flex-row align-items-start">
           <font-awesome-icon icon="home"/>
-          {{actualPartner.endereco}}, {{actualPartner.cidade}}, {{actualPartner.estado}}, {{actualPartner.pais}}
+          <span>{{actualPartner.endereco}}, {{actualPartner.cidade}}, {{actualPartner.estado}}, {{actualPartner.pais}}</span>
         </div>
         <div class="--DocPhoneMail d-flex flex-row align-items-start">
           <div class="--Doc">
@@ -21,9 +23,9 @@
           </div>
           <div class="--Phone">
             <font-awesome-icon icon="phone-volume"/>
-            <span>{{actualPartner.telefone ? actualPartner.telefone.replace(/^(\d{2})(\d{4})(\d{4})/, "($1) $2-$3") : null}}</span>
+            <span style="margin-left: 5px;">{{actualPartner.telefone ? actualPartner.telefone.replace(/^(\d{2})(\d{4})(\d{4})/, "($1) $2-$3") : null}}</span>
           </div>
-          <div class="--Main">
+          <div class="--Mail d-flex flex-row">
             <font-awesome-icon icon="envelope"/>
             <span style="text-transform: lowercase">{{actualPartner.email}}</span>
           </div>
@@ -54,25 +56,37 @@ $screen-sm-max: 578px;
 .PartnersView {
   padding: 48px 48px 48px 72px;
   @media screen and (max-width: #{$screen-sm-max}) {
-    
+    padding: 129px 20px 31px;
   }
   .__PartnerContent {
     display: flex;
     flex-direction: row;
     width: 100%;
     @media screen and (max-width: #{$screen-sm-max}) {
+      position: relative;
       flex-direction: column;
     }
     img {
+      background-color: #fff;
       margin-right: 23px;
       border-radius: 50%;
       padding: 5px;
-      border: 2px solid #E7E7E7;
+      border: 2px solid rgb(126, 92, 92);
       min-height: 224px;
       height: 224px;
       min-width: 224px;
       width: 224px;
-      @media screen and (max-width: #{$screen-sm-max}) {}
+      @media screen and (max-width: #{$screen-sm-max}) {
+        min-height: 154px !important;
+        height: 154px !important;
+        min-width:154px !important;
+        width: 154px !important;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+      }
     }
     .--Data {
       svg {
@@ -91,19 +105,33 @@ $screen-sm-max: 578px;
       border: 1px solid #E7E7E7;
       box-sizing: border-box;
       @media screen and (max-width: #{$screen-sm-max}) {
+        padding-top: 74px;
       }
       .--Header {
         margin-bottom: 40px;
-        span {
-          margin-left: 10px;
-          font-family: Encode Sans;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 16px;
-          letter-spacing: 0.385185px;
-          color: #797979;
-          @media screen and (max-width: #{$screen-sm-max}) {}
+        .--FantasyName {
+          @media screen and (max-width: #{$screen-sm-max}) {
+            width: 100%;
+          }
+          span {
+            margin-left: 10px;
+            font-family: Encode Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.385185px;
+            color: #3F3F3F;
+            @media screen and (max-width: #{$screen-sm-max}) {
+              margin: 0;
+              font-size: 17px;
+              line-height: 19px;
+              text-align: center;
+              letter-spacing: 0.503704px;
+              max-width: 180px;
+              text-align: center;
+            }
+          }
         }
         .--SocialName {
           min-width: 207px;
@@ -128,10 +156,11 @@ $screen-sm-max: 578px;
         margin-bottom: 40px;
         @media screen and (max-width: #{$screen-sm-max}) {}
         svg {
-          font-size: 15px;
+          font-size: 17px;
           color: #797979;
         }
         span {
+          text-align: left;
           font-family: Encode Sans;
           font-style: normal;
           font-weight: normal;
@@ -144,10 +173,10 @@ $screen-sm-max: 578px;
       .--DocPhoneMail {
         @media screen and (max-width: #{$screen-sm-max}) {
           display: flex;
-          flex-direction: column;
+          flex-direction: column !important;
         }
         svg {
-          font-size: 15px;
+          font-size: 17px;
           color: #797979;
         }
         span {
@@ -160,8 +189,10 @@ $screen-sm-max: 578px;
           letter-spacing: 0.385185px;
           color: #797979;
         }
-        .--Doc, .--Phone, .--Main {
-          @media screen and (max-width: #{$screen-sm-max}) {}
+        .--Doc, .--Phone, .--Mail {
+          @media screen and (max-width: #{$screen-sm-max}) {
+            margin-bottom: 33px;
+          }
         }
       }
     }
