@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import Header from '../../components/templates/Header.vue' 
+import Header from '@/components/templates/Header.vue' 
 export default {
     name: 'Companies',
-    components: ['Header']
+    components: { Header }
 }
 </script>
 

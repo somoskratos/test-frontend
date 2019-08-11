@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import DocumentWidget from '../../components/documents/DocumentWidget.vue'
+import DocumentWidget from '@/components/documents/DocumentWidget.vue'
 export default {
     name: 'Company',
-    componenents: [DocumentWidget]
+    componenents: { DocumentWidget }
 }
 </script>
 
