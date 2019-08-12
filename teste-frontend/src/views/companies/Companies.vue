@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="companies">
         <Header />
         <router-view />
     </div>  
@@ -13,6 +13,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+.companies {
+    background-color: rgb(245, 245, 245);
+    height: 100%;
+    width: 100%;
+}
 
 </style>

@@ -1,6 +1,6 @@
-import Companies from '../../../views/companies/Companies.vue'
-import CompaniesList from '../../../views/companies/CompaniesList.vue'
-import Company from '../../../views/companies/Company.vue'
+import Companies from '../../../views/companies/Companies'
+import CompaniesList from '../../../views/companies/CompaniesList'
+import Company from '../../../views/companies/Company'
 export default {
     path: '/companies',
     name: '',

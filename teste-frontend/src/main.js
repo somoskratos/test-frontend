@@ -1,17 +1,19 @@
 import Vue from 'vue'
 import App from '@/App'
 
+import 'vue-fontawesome'
+import '@fortawesome/free-solid-svg-icons'
+import './config/bootstrap/bootstrap'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from 'vue-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
 
 import router from '@/config/router'
 import store from '@/config/store'
 
 
-library.add(faUserSecret)
-
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+library.add(fas)
 
 
 Vue.config.productionTip = false
