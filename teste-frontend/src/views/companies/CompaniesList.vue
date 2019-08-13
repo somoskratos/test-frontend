@@ -1,15 +1,21 @@
 <template>
-  <div class="row justify-content-center align-items-center mt-5 col-12">
-      <span class="text-dark col-6 text-center mb-2">Suas Empresas</span>
-      <span class="text-muted col-8 text-center mb-5">Clique em uma de suas empresas para acessar seu perfil no Contador Online</span>
+  <div class="d-flex row justify-content-center align-items-center mt-5 col-12">
+      <span class="text-dark col-10 text-center mb-3">Suas Empresas</span>
+      <span class="text-muted col-10 text-center mb-5">Clique em uma de suas empresas para acessar seu perfil no Contador Online</span>
       <div v-for="(CompaniesSubList, index) in getCompaniesList" :key="index"
-        class="col-8 d-flex flex-wrap justify-content-center">
-            <CompanyWidget class="col-12 col-md-5 compact"
+        class="col-12 col-lg-8 d-flex justify-content-center align-items-center flex-wrap">
+        <div class="col-12 col-lg-6 d-flex flex-row justif-content-center align-items-center flex-wrap">
+            <CompanyWidget class="compact col-12"
             :title="CompaniesSubList[0].nomeFantasia" :id="CompaniesSubList[0].id" :imgSrc="CompaniesSubList[0].logo"/>
-            <CompanyWidget class="col-12 col-md-5 extended"
+            <CompanyWidget class="compact col-12"
             :title="CompaniesSubList[1].nomeFantasia" :id="CompaniesSubList[1].id" :imgSrc="CompaniesSubList[1].logo"/>
-            <CompanyWidget class="col-12 col-md-5 compact"
+        </div>
+        <div class="col-12 col-lg-6 d-flex flex-row">
+            <CompanyWidget class="extended col-12"
             :title="CompaniesSubList[2].nomeFantasia" :id="CompaniesSubList[2].id" :imgSrc="CompaniesSubList[2].logo"/>
+        </div>
+            
+            
       </div>
   </div>
 </template>
@@ -28,8 +34,7 @@ export default {
     },
     methods: {
         ...mapActions('companies', [
-            'fetchCompanies',
-            'selectCompany'
+            'fetchCompanies'
         ])
     },
     mounted() {
@@ -40,16 +45,16 @@ export default {
 
 <style scoped>
 .compact {
-    height: 250px;
+    height: 350px;
 }
 
 .extended {
-    height: 500px;
+    height: 733px;
     
 }
 @media (max-width: 775px) {
     .extended {
-        height: 250px;
+        height: 350px;
     }      
 }
 

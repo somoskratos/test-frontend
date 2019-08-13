@@ -1,6 +1,6 @@
 <template>
-  <b-navbar class="d-flex row navbar">
-    <b-navbar-nav class="ml-2 col-12 col-md-2 logo d-flex justify-content-center align-items-center" >
+  <b-navbar class="d-flex navbar justify-content-between p-0">
+    <b-navbar-nav class="p-3 col-12 col-md-2 logo d-flex justify-content-center align-items-center" >
       <router-link to='/companies'>
         <img src="@/assets/Logo.svg" alt="Logo">
       </router-link>  
@@ -27,10 +27,8 @@ export default {
   color: rgb(215, 215, 215);
 }
 .navbar {
-  justify-content: space-between;
-  padding: 0px;
   background-color: #fff;
-  height: 75px;
+  height: 100px;
   border-bottom: 1px solid rgb(215, 215, 215);
 }
 .logo {

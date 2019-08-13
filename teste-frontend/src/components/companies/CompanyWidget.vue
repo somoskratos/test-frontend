@@ -1,13 +1,14 @@
 <template>
-    <div class="widget m-3 d-flex align-items-center justify-content-center text-center">
-        <router-link :to="{name: 'company', params: {id: id}}">
-            <img :src="imgSrc" :alt="title" style="border-radius: 50%; height: 75px;">
-        </router-link>
+    <router-link class="widget mb-4 m-lg-3 p-3 p-lg-5 d-flex flex-column
+     align-items-center justify-content-center text-center"
+      :to="{name: 'company', params: {id: this.id}, props: {id: this.id}}">
+        <img :src="imgSrc" :alt="title" style="border-radius: 50%; height: 120px; width: 120px;">        
         <span class="text-muted mt-5">{{title}}</span>   
-    </div>       
+    </router-link>       
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 export default {
     name: 'CompanyWidget',
     props: ['title', 'id', 'imgSrc']
@@ -16,9 +17,8 @@ export default {
 </script>
 
 <style scoped>
-.widget .widget:hover {
+.widget {
     text-decoration: none;
-    flex-direction: column;
     background-color: #fff;
     border: 1px solid rgb(215, 215, 215);
 }

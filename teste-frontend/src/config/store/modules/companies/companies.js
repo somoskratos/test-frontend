@@ -36,11 +36,17 @@ export default {
             commit('SET_COMPANIES', finalList)
         },
         async fetchDocuments({ commit }, id) {
-            const documents = await axios.get(`${api.uri}/${id}/documentos`)
+            let documents = []
+            await axios.get(`${api.uri}/${id}/documentos`).then(resp => {
+                documents = resp.data
+            })
             commit('SET_DOCUMENTS', documents)
         },
         async selectCompany({ commit }, id) {
-            const company = await axios.get(`${api.uri}/${id}`)
+            let company = {}
+            await axios.get(`${api.uri}/${id}`).then(resp => {
+                company = resp.data
+            })
             commit('SET_CURRENT_COMPANY', company)
         }
     },

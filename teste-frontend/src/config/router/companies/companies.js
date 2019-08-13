@@ -15,6 +15,7 @@ export default {
             path: '/companies/:id',
             name: 'company',
             component: Company,
+            props: true
         }
     ]
 }
