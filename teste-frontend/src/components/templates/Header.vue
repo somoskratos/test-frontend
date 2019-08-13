@@ -29,7 +29,7 @@ export default {
 .navbar {
   background-color: #fff;
   height: 100px;
-  border-bottom: 1px solid rgb(215, 215, 215);
+  border-bottom: 1px solid rgb(240, 240, 240);
 }
 .logo {
   height: 100%;

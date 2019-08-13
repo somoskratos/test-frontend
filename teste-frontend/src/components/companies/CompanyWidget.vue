@@ -20,6 +20,6 @@ export default {
 .widget {
     text-decoration: none;
     background-color: #fff;
-    border: 1px solid rgb(215, 215, 215);
+    border: 1px solid rgb(240, 240, 240);
 }
 </style>

@@ -19,7 +19,7 @@ export default {
     margin: 0px;
 }
 .companies {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(247, 247, 247);
     height: 100%;
     width: 100%;
 }

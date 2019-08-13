@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex row justify-content-center align-items-center mt-5 col-12">
       <span class="text-dark col-10 text-center mb-3">Suas Empresas</span>
-      <span class="text-muted col-10 text-center mb-5">Clique em uma de suas empresas para acessar seu perfil no Contador Online</span>
+      <span class="text-muted col-8 col-md-6 text-center text-wrap mb-5">Clique em uma de suas empresas para acessar seu perfil no Contador Online</span>
       <div v-for="(CompaniesSubList, index) in getCompaniesList" :key="index"
         class="col-12 col-lg-8 d-flex justify-content-center align-items-center flex-wrap">
         <div class="col-12 col-lg-6 d-flex flex-row justif-content-center align-items-center flex-wrap">
@@ -45,16 +45,16 @@ export default {
 
 <style scoped>
 .compact {
-    height: 350px;
+    height: 300px;
 }
 
 .extended {
-    height: 733px;
+    height: 632px;
     
 }
 @media (max-width: 775px) {
     .extended {
-        height: 350px;
+        height: 300px;
     }      
 }
 
@@ -62,6 +62,6 @@ export default {
     font-size: 16pt;
 }
 .text-secondary {
-    font-size: 12pt;
+    font-size: 14pt;
 }
 </style>
