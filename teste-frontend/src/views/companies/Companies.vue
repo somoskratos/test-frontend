@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Header from '@/components/templates/Header.vue' 
+import Header from '@/components/templates/Header' 
 export default {
     name: 'Companies',
     components: { Header }

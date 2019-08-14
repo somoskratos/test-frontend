@@ -57,7 +57,6 @@ export default {
         height: 300px;
     }      
 }
-
 .text-dark {
     font-size: 16pt;
 }
