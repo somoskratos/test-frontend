@@ -1,12 +1,12 @@
 <template>
   <div class="d-flex row justify-content-center">
     <span class="col-12 text-center mb-4 mt-4">Documentos</span>
-    <b-card-group deck class="col-10 d-flex justify-content-between">
-      <DocumentWidget class="col-12 col-lg-8 col-xl-2" v-for="Document in getDocuments" :key="Document.id"
+    <div class="col-12 d-flex flex-wrap p-3 m-0 justify-content-center">
+      <DocumentWidget v-for="Document in getDocuments" :key="Document.id"
         :valid="!Document.vencido"
         :title="Document.nome"
         :createdAt="Document.criadoEm" />
-    </b-card-group>
+    </div>
   </div>
 </template>
 
@@ -39,6 +39,8 @@ export default {
 </script>
 
 
-<style>
-
+<style scoped>
+.text-center {
+  font-size: 1.5rem;
+}
 </style>
