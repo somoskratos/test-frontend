@@ -1,5 +1,5 @@
 <template>
-    <router-link class="widget mb-4 m-lg-3 p-3 p-lg-5 d-flex flex-column
+    <router-link class="widget mb-4 p-3 p-lg-5 d-flex flex-column bg-white
      align-items-center justify-content-center text-center"
       :to="{name: 'company', params: {id: this.id}, props: {id: this.id}}">
         <img :src="imgSrc" :alt="title" style="border-radius: 50%; height: 120px; width: 120px;">        
@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
 export default {
     name: 'CompanyWidget',
     props: ['title', 'id', 'imgSrc']
@@ -19,7 +18,6 @@ export default {
 <style scoped>
 .widget {
     text-decoration: none;
-    background-color: #fff;
     border: 1px solid rgb(240, 240, 240);
 }
 </style>
