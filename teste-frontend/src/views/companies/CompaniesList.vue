@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex row justify-content-center align-items-center mt-5">
-      <span class="text-dark col-10 text-center mb-3">Suas Empresas</span>
+  <div class="d-flex row justify-content-center align-items-center">
+      <span class="text-dark col-10 text-center mt-5 mb-3">Suas Empresas</span>
       <span class="text-muted col-10 text-center mb-5">
           Clique em uma de suas empresas para acessar seu perfil no Contador Online</span>
       <div v-for="(CompaniesSubList, index) in getCompaniesList" :key="index"

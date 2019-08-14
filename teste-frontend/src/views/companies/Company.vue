@@ -2,7 +2,7 @@
   <div class="d-flex row justify-content-center">
     <span class="col-12 text-center mb-4 mt-4">Documentos</span>
     <b-card-group deck class="col-10 d-flex justify-content-between">
-      <DocumentWidget class="col-12 col-md-2" v-for="Document in getDocuments" :key="Document.id"
+      <DocumentWidget class="col-12 col-lg-8 col-xl-2" v-for="Document in getDocuments" :key="Document.id"
         :valid="!Document.vencido"
         :title="Document.nome"
         :createdAt="Document.criadoEm" />
