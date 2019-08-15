@@ -1,9 +1,20 @@
 <template>
   <div class="d-flex row justify-content-between align-items-start p-4">
-    <img :src="getCurrentCompany.logo" alt="" class="logo rounded-circle col-3" style="height: 200px; width: 200px;">
+    <div class="d-flex justify-content-center  align-items-center 
+    col-12 col-md-4 col-lg-2 rounded-circle bg-white" style="height: 250px; width: 250px;">
+      <img :src="getCurrentCompany.logo" alt="" class="logo rounded-circle"
+      style="height: 160px; width: 160px;">    
+    </div>
     <b-jumbotron :lead="getCurrentCompany.nomeFantasia" bg-variant="white"
-     class="col-12 col-md-8">
-        <span class=""></span>
+     class="col-12 col-md-8 col-lg-10 p-5">
+        <div class="col-12 mb-4 mt-4">
+          <i class="text-muted fa fa-home"></i>
+        </div>
+        <div class="col-12 d-flex flex-column  justify-content-between align-items-between">
+          <i class="text-muted fas fa-id-card"></i>
+          <i class="text-muted fas fa-phone"></i>
+          <i class="text-muted fas fa-envelope"></i>
+        </div>
     </b-jumbotron>
 
     <span class="col-12 text-center mb-4 mt-4">Documentos</span>
@@ -48,5 +59,9 @@ export default {
 <style scoped>
 .text-center {
   font-size: 1.5rem;
+}
+
+.rounded-circle {
+  border: 1px solid rgb(240, 240, 240);
 }
 </style>
