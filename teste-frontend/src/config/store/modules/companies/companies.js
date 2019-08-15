@@ -1,5 +1,5 @@
 import axios from 'axios'
-import api from '../../../../../env'
+import api from '../../../../../.env.local'
 
 export default {
     state: {
