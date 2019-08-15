@@ -18,6 +18,6 @@ export default {
 <style scoped>
 .widget {
   text-decoration: none;
-  border: 1px solid rgb(240, 240, 240);
+  border: 1px solid lightgrey;
 }
 </style>

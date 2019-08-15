@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 .widget {
-  border: 1px solid rgb(240, 240, 240);
+  border: 1px solid lightgrey;
   height: 160px;
   max-height: 160px;
 }

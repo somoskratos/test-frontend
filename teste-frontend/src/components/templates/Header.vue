@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   height: 100px;
-  border-bottom: 1px solid rgb(240, 240, 240);
+  border-bottom: 1px solid lightgrey;
 }
 .logo,
 .icon {
