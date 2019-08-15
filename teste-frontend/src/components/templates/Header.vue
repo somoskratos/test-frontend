@@ -1,34 +1,35 @@
 <template>
   <b-navbar class="d-flex navbar justify-content-between p-0 bg-white">
-    <b-navbar-nav class="p-3 col-12 col-md-3 col-lg-2 logo d-flex justify-content-center align-items-center" >
-      <router-link to='/companies'>
-        <img src="@/assets/Logo.svg" alt="Logo">
-      </router-link>  
+    <b-navbar-nav
+      class="p-3 col-12 col-md-3 col-lg-2 logo d-flex justify-content-center align-items-center"
+    >
+      <router-link to="/companies">
+        <img src="@/assets/Logo.svg" alt="Logo" />
+      </router-link>
     </b-navbar-nav>
-      <b-navbar-nav class="p-0 icon d-none d-md-flex col-md-2 col-lg-1 align-items-center justify-content-center">
-        <router-link to="signout">
-          <i class="fas fa-sign-out-alt fa-2x text-muted"></i>
-        </router-link>
-      </b-navbar-nav>
-  </b-navbar >
+    <b-navbar-nav
+      class="p-0 icon d-none d-md-flex col-md-2 col-lg-1 align-items-center justify-content-center"
+    >
+      <router-link to="signout">
+        <i class="fas fa-sign-out-alt fa-2x text-muted"></i>
+      </router-link>
+    </b-navbar-nav>
+  </b-navbar>
 </template>
 
 <script>
-import { dom } from '@fortawesome/fontawesome-svg-core'
-dom.watch()
-
 export default {
-    name: 'Header'
-}
+  name: "Header"
+};
 </script>
 
 <style lang="scss" scoped>
-
 .navbar {
   height: 100px;
   border-bottom: 1px solid rgb(240, 240, 240);
 }
-.logo, .icon {
+.logo,
+.icon {
   height: 100%;
   border-right: 2px solid rgb(245, 245, 245);
 }
@@ -39,6 +40,4 @@ export default {
 img {
   height: 30px;
 }
-
-
 </style>

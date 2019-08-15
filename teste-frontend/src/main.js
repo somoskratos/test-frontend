@@ -3,7 +3,6 @@ import App from './App.vue'
 
 import './config/bootstrap/bootstrap'
 import './config/fontawesome/fontawesome'
-import './config/the-mask/mask'
 
 import router from './config/router'
 import store from './config/store'
