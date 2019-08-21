@@ -8,7 +8,9 @@
 
 ## Setup do projeto
 ```
-* • Adicionar o arquivo .env.local na raiz do projeto (pŕoximo ao package.json) contendo * a url da api (um exemplo está no arquivo .env.example)
+´´´
+* Adicionar o arquivo .env.local na raiz do projeto (pŕoximo ao package.json) contendo 
+* a url da api (um exemplo está no arquivo .env.example)
 
 * yarn install
 ```
@@ -16,7 +18,7 @@
 ### Compila e serve na porta 3030 com hot-reload para desenvolvimento
 ```
 (Servindo na porta 3030, para alterar, editar a entrada 'serve' no package.json)
-yarn run serve
+yarn serve
 ```
 
 

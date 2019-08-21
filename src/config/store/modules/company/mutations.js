@@ -13,5 +13,11 @@ export default {
     },
     SET_TIPO: (state, payload = '') => {
         state.tipo = payload
+    },
+    SET_NOME_FANTASIA: (state, payload = '') => {
+        state.nomeFantasia = payload
+    },
+    SET_LOGO: (state, payload = '') => {
+        state.logo = payload
     }
 }
