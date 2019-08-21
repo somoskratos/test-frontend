@@ -12,4 +12,12 @@ module.exports = {
             title: 'Contador Online'
         }
     }
+    //SASS
+    // css: {
+    //     loaderOptions: {
+    //       sass: {
+    //         data: `@import "@/config/scss/defaults.scss";`
+    //       }
+    //     }
+    // }
 }

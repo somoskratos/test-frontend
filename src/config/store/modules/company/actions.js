@@ -1,5 +1,5 @@
 export default {
-    maskThis({ commit }, { nomeFantasia, endereco, cidade, estado, pais, cnpj, telefone }) {
+    maskInfo({ commit }, { nomeFantasia, endereco, cidade, estado, pais, cnpj, telefone }) {
 
         const maskedAddr = endereco + '. ' + cidade + ', '
             + estado + ', ' + pais
@@ -18,9 +18,9 @@ export default {
         maskedPhone += telefone.slice(2, 6) + '-'
         maskedPhone += telefone.slice(6)
         commit('SET_PHONE', maskedPhone)
-
-        console.log(nomeFantasia.slice(nomeFantasia.length - 4))
-        if (nomeFantasia.slice(nomeFantasia.length - 4).toUpperCase() === 'LTDA') {
+        
+        
+        if (nomeFantasia.toUpperCase().includes('LTDA')) {
             commit('SET_TIPO', 'Sociedade Empresarial Limitada')
         } else commit('SET_TIPO', 'Sociedade Empresarial Anônima')
     }
