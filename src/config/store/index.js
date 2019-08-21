@@ -11,13 +11,7 @@ Vuex.createNamespacedHelpers('company')
 
 export default new Vuex.Store({
     modules: {
-        companies: {
-            namespaced: true,
-            ...companies
-        },
-        company: {
-            namespaced: true,
-            ...company
-        }
+        companies,
+        company
     },
 })
