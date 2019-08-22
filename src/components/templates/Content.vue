@@ -1,16 +1,16 @@
 <template>
-  <router-view class="content bg-light m-0 p-0" />
+  <router-view class="content m-0 p-0" />
 </template>
 
 <script>
 export default {};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .content {
   height: 100%;
   width: 100%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: $font-family;
+  background-color: $secondary-background;
 }
 </style>

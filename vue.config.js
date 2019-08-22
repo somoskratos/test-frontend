@@ -11,13 +11,12 @@ module.exports = {
             // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
             title: 'Contador Online'
         }
+    },
+    css: {
+        loaderOptions: {
+          sass: {
+            data: `@import "./src/config/scss/defaults.scss";`
+          }
+        }
     }
-    //SASS
-    // css: {
-    //     loaderOptions: {
-    //       sass: {
-    //         data: `@import "@/config/scss/defaults.scss";`
-    //       }
-    //     }
-    // }
 }

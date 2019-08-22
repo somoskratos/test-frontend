@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="d-flex navbar justify-content-between p-0 bg-white">
+  <b-navbar class="d-flex navbar justify-content-between p-0">
     <b-navbar-nav
       class="p-3 col-12 col-md-3 col-lg-2 logo d-flex justify-content-center align-items-center"
     >
@@ -11,7 +11,7 @@
       class="p-0 icon d-none d-md-flex col-md-2 col-lg-1 align-items-center justify-content-center"
     >
       <router-link to="signout">
-        <i class="fas fa-sign-out-alt fa-2x text-muted"></i>
+        <i class="fas fa-sign-out-alt fa-2x"></i>
       </router-link>
     </b-navbar-nav>
   </b-navbar>
@@ -24,17 +24,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fa-sign-out-alt {
+  color: $text-secondary;
+}
 .navbar {
   height: 100px;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: $primary-border;
+  background-color: $primary-background;
 }
-.logo,
+.logo {
+  height: 100%;
+  border-right: $secondary-border;
+}
 .icon {
   height: 100%;
-  border-right: 2px solid rgb(245, 245, 245);
-}
-.icon {
-  border-left: 2px solid rgb(245, 245, 245);
+  border-left: $secondary-border;
 }
 
 img {

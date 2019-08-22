@@ -1,10 +1,12 @@
 <template>
   <router-link
-    class="widget mb-4 p-3 p-lg-5 d-flex flex-column bg-white align-items-center justify-content-center text-center"
+    class="widget mb-3 p-3 p-lg-5 d-flex flex-column align-items-center justify-content-center text-center"
     :to="{name: 'company', params: {id: this.id}, props: {id: this.id}}"
   >
-    <img :src="imgSrc" :alt="title" class="rounded-circle" style="height: 120px; width: 120px;" />
-    <span class="text-muted mt-5">{{title}}</span>
+  <div class="img">    
+    <img :src="imgSrc" :alt="title" class="rounded-circle" />
+  </div>
+    <span class="title mt-5">{{title}}</span>
   </router-link>
 </template>
 
@@ -15,9 +17,30 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .widget {
   text-decoration: none;
-  border: 1px solid lightgrey;
+  border: $primary-border;
+  background-color: $primary-background;
+}
+.title {
+  color: $text-primary;
+  font-size: $font-lg;
+}
+
+.img {
+  height: 94px;
+  width: 177px;
+}
+img {
+  width: 70%;
+  height: 100%;
+}
+
+@media (max-width: $tablets) { 
+  img {
+    width: 50%;
+    height: 80%;
+  }
 }
 </style>

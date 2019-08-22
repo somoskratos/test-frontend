@@ -1,15 +1,15 @@
 <template>
   <div class="d-flex row justify-content-center align-items-center">
-    <span class="text-dark col-10 text-center mt-5 mb-3">Suas Empresas</span>
+    <span class="title col-10 text-center mt-5 mb-3">Suas Empresas</span>
     <span
-      class="text-muted col-10 text-center mb-5"
+      class="subtitle col-10 text-center mb-5"
     >Clique em uma de suas empresas para acessar seu perfil no Contador Online</span>
     <div
       v-for="(CompaniesSubList, index) in getCompaniesList"
       :key="index"
       class="col-12 col-lg-8 d-flex justify-content-center align-items-center flex-wrap"
     >
-      <div class="col-12 col-lg-6 d-flex justif-content-center align-items-center flex-wrap">
+      <div class="col-12 col-md-6 d-flex justif-content-center align-items-center flex-wrap">
         <CompanyWidget
           class="compact col-12"
           :title="CompaniesSubList[0].nomeFantasia"
@@ -23,7 +23,7 @@
           :imgSrc="CompaniesSubList[1].logo"
         />
       </div>
-      <div class="col-12 col-lg-6 d-flex flex-row">
+      <div class="col-12 col-md-6 d-flex flex-row">
         <CompanyWidget
           class="extended col-12"
           :title="CompaniesSubList[2].nomeFantasia"
@@ -54,23 +54,25 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .compact {
-  height: 300px;
+  height: $widget-md;
 }
 
 .extended {
-  height: 632px;
+  height: $widget-lg;
 }
-@media (max-width: 991px) {
+@media (max-width: $phones) {
   .extended {
-    height: 300px;
+    height: $widget-md;
   }
 }
-.text-dark {
-  font-size: 1.5rem;
+.title {
+  font-size: $font-title;
+  color: $text-primary;
 }
-.text-muted {
-  font-size: 0.9rem;
+.subtitle {
+  font-size: $font-subtitle;
+  color: $text-secondary;
 }
 </style>
