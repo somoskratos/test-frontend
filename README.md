@@ -93,10 +93,18 @@ Templates
 ```
 -> [src/components](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/components "src/components")
 
+### Estilos 
+<i>Scss</i>
+• O arquivo de variáveis de estilo é carregado via [vue.config.js](https://github.com/Thrashattack/test-frontend/blob/teste-carlos-cunha/vue.config.js) através do css loader
 
+-> [src/config/scss](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/scss "src/config/scss")
+
+> Todo os valores foram obtidos no figma disponibilizado junto com o teste, exceto tamanhos padrão de dispositivos.
 
 
 [kratosfrontend]: https://github.com/somoskratos/test-frontend "kratos frontend"
 [src/config/store]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/store "src/config/store"
 [src/views]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/views "src/views"
 [src/config/router]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/router "src/config/router"
+[src/config/scss]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/scss "src/config/scss"
+[vue.config.js]: https://github.com/Thrashattack/test-frontend/blob/teste-carlos-cunha/vue.config.js "vue.config.js"
