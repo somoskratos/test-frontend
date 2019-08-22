@@ -77,7 +77,7 @@ Companies - Tela raiz do módulo de empresas
 	----> '/' - Lista de Empresas
 	|
 	|
-	----> '/:id' - Dashboard da empresa selecionada
+	----> '/companies/:id' - Dashboard da empresa selecionada
 ```
 
 </li>
