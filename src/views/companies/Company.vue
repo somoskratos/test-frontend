@@ -1,8 +1,8 @@
 <template>
-  <div class="d-flex row align-items-start justify-content-around p-4 p-md-5">
+  <div class="d-flex row align-items-start justify-content-center p-4 p-md-5">
     <Panel class="d-flex align-items-start justify-content-around col-12" />
     <span class="title col-12 mb-4 mt-4">Documentos</span>
-    <div class="col-12 d-flex flex-wrap p-3 m-0 justify-content-start">
+    <div class="col-12 d-flex flex-wrap p-0 m-0 justify-content-start">
       <DocumentWidget
         v-for="Document in getDocuments"
         :key="Document.id"

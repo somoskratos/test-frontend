@@ -1,5 +1,5 @@
 <template>
-  <div class="companies">
+  <div>
     <Header />
     <Content />
   </div>

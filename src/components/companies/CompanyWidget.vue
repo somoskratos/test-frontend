@@ -3,10 +3,10 @@
     class="widget mb-3 p-3 p-lg-5 d-flex flex-column align-items-center justify-content-center text-center"
     :to="{name: 'company', params: {id: this.id}, props: {id: this.id}}"
   >
-  <div class="img">    
+  <div class="img mt-2">    
     <img :src="imgSrc" :alt="title" class="rounded-circle" />
   </div>
-    <span class="title mt-5">{{title}}</span>
+    <span class="title mt-3">{{title}}</span>
   </router-link>
 </template>
 
@@ -29,18 +29,18 @@ export default {
 }
 
 .img {
-  height: 94px;
-  width: 177px;
+  height: $widget-img-h;
+  width: $widget-img-w;
 }
 img {
-  width: 70%;
-  height: 100%;
+  width: $widget-img-scale-md-w;
+  height: $widget-img-scale-md-h;
 }
 
 @media (max-width: $tablets) { 
   img {
-    width: 50%;
-    height: 80%;
+    width: $widget-img-scale-sm-w;
+    height: $widget-img-scale-sm-h;
   }
 }
 </style>

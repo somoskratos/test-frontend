@@ -23,15 +23,15 @@
       <div class="col-12 d-block d-md-flex p-0 flex-wrap">
         <div class="d-flex col-md-4 p-2">
           <i class="text fas fa-id-card"></i>
-          <p class="text col-6">{{getCompany.cnpj}}</p>
+          <p class="text col-8">{{getCompany.cnpj}}</p>
         </div>
         <div class="d-flex col-md-4 p-2">
           <i class="text fas fa-phone"></i>
-          <p class="text col-6">{{getCompany.phone}}</p>
+          <p class="text col-8">{{getCompany.phone}}</p>
         </div>
         <div class="d-flex col-md-4  p-2 flex-wrap">
           <i class="text fas fa-envelope"></i>
-          <p class="text col-6">{{getCompany.email}}</p>
+          <p class="text col-8">{{getCompany.email}}</p>
         </div>
       </div>
     </b-jumbotron>
@@ -59,7 +59,7 @@ export default {
   font-size: $font-md;
 }
 .logo {
-  height: 250px;
+  height: $panel-logo-lg-h;
   background-color: $primary-background;
   border: $primary-border;
 }
@@ -72,8 +72,8 @@ export default {
 }
 img {
   border: $primary-border;
-  height: 75%;
-  width: 75%;
+  height: $panel-img-scale-sm-h;
+  width: $panel-img-scale-sm-w;
 }
 @media(max-width: $phones) {  
   .text-name {    
@@ -86,26 +86,26 @@ img {
   .logo {
     position: absolute;
     z-index: 1;
-    height: 200px;
+    height:  $panel-logo-sm-h;
   }
   img {
-    height: 75%;
-    width: 85%;
+    height: $panel-img-scale-md-h;
+    width: $panel-img-scale-md-w;
   }
   .panel {
-    margin-top: 120px;
+    margin-top: $panel-md-mt;
   }
   .name {
-    margin-top: 80px;
+    margin-top: $panel-name-md-mt;
   }
 }
 @media (min-width: $notebooks) {
   img {
-    height: 75%;
-    width: 95%;
+    height: $panel-img-scale-lg-h;
+    width: $panel-img-scale-lg-w;
   }
   .logo {
-    height: 210px;
+    height: $panel-logo-md-h;
   }
 }
 </style>

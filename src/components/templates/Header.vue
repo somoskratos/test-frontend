@@ -28,7 +28,7 @@ export default {
   color: $text-secondary;
 }
 .navbar {
-  height: 100px;
+  height: $navbar-h;
   border-bottom: $primary-border;
   background-color: $primary-background;
 }
@@ -42,6 +42,6 @@ export default {
 }
 
 img {
-  height: 30px;
+  height: $navbar-img-h;
 }
 </style>

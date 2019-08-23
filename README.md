@@ -99,7 +99,16 @@ Templates
 
 -> [src/config/scss](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/scss "src/config/scss")
 
-> Todo os valores foram obtidos no figma disponibilizado junto com o teste, exceto tamanhos padrão de dispositivos.
+> Todos os valores foram obtidos no figma disponibilizado junto com o teste, exceto tamanhos padrão de dispositivos.
+
+• Bootstrap e Fontsawesome carregados diretamente no [main.js](https://github.com/Thrashattack/test-frontend/blob/teste-carlos-cunha/src/main.js "main.js")
+
+-> [src/config/bootstrap/bootstrap.js](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/bootstrap/bootstrap.js "src/config/bootstrap/boostrap.js")
+
+-> [src/config/fontawesome/fontawesome.js](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/fontawesome/fontawesome.js "src/config/fontawesome/fontawesome.js")
+
+> O pacote de icones utilizado é o FAS (FontAwesome Solid). Não foi possível obter gratuitamente o pacote FAL (FontAwesome Light) como proposto no figma.
+
 
 
 [kratosfrontend]: https://github.com/somoskratos/test-frontend "kratos frontend"
@@ -108,3 +117,7 @@ Templates
 [src/config/router]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/router "src/config/router"
 [src/config/scss]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/scss "src/config/scss"
 [vue.config.js]: https://github.com/Thrashattack/test-frontend/blob/teste-carlos-cunha/vue.config.js "vue.config.js"
+[main.js]: https://github.com/Thrashattack/test-frontend/blob/teste-carlos-cunha/src/main.js "main.js"
+[src/config/bootstrap/bootstrap.js]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/bootstrap/bootstrap.js "src/config/bootstrap/boostrap.js"
+[src/config/fontawesome/fontawesome.js]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/fontawesome/fontawesome.js "src/config/fontawesome/fontawesome.js"
+
