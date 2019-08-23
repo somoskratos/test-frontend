@@ -1,52 +1,123 @@
-# Teste front-end
+# teste-frontend
+* Implementação do [desafio kratos frontend](https://github.com/somoskratos/test-frontend "kratos frontend").
 
-## Por que trabalhar no Kratos?
-O Kratos é uma Startup que nasceu em Campo Grande/MS que oferece um sistema de gestão empresarial. Nós entregamos aos nossos clientes um sistema e a contabilidade em um só lugar.
+##### Técnologias:
+```
+ES6
+Node.js >= 10.0.0
+Vue.js >= 3.0.0 
+Yarn >= 1.0.2
+```
+### Setup do projeto
+> Adicione o arquivo .env.local na raiz do projeto (pŕóximo ao package.json) contendo a url da api (um exemplo está no arquivo .env.example)
 
-Quer conhecer mais sobre a empresa? https://somoskratos.com.br/
+``` 
+yarn install
+```
 
-## Sobre a vaga
-Estamos à procura do nosso novo(a) desenvolvedor(a) frontend VueJS pleno para inovar na área de contabilidade.
+### Compila e serve na porta 3030 com hot-reload para desenvolvimento
+> Servindo na porta 3030. Para alterar, editar a entrada 'serve' no package.json
 
-O papel desempenhado em seu dia a dia será trabalhar junto com a equipe na criação de novas funcionalidades e refatoração de algumas rotinas do sistema.
+```
+yarn serve
+```
+Ex:
+>App running at:
+  - Local:   http://localhost:3030/
+  - Network: http://192.168.1.12:3030/
 
-Trabalhamos em um ambiente bem tranquilo, nossa regra é: liberdade com responsabilidade.
+### Rotas 
+<ol>
+<li><b>/companies </b> - lista de empresas</li>
+	<ol>
+	<li><b>/companies/<i>:id</i> </b> - dashboard da empresa selecionada</li>
+	</ol>
+</ol>
 
-Se você se enquadra nessa idéia os requisitos são:
+### Arquitetura
+• Padrão MVC com as 3 camadas modularizadas para facilitar a implementação de outras layers: autenticação, validação e etc.
 
-## Requisitos
-Ter disponibilidade para trabalhar em Campo Grande/MS;
-Ter excelente comunicação;
-Conhecer metodologias ágeis;
-Conhecimento em desenvolvimento orientado a testes;
-Experiência com VueJS, SASS, Babel, Jest (ou similares);
+<html>
+<ol>
+<li> <b>Model</b> <i>Vuex</i>
 
-## O Desafio:
+->[src/config/store](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/store "src/config/store").
 
-Criar uma aplicação VueJS que permita visualizar o perfil de nossos clientes. 
+• <b>Módulos</b> <i>Store</i>
 
-O design do site vc encotra em:
-https://www.figma.com/file/RVoviOrwjK3Vhp96aIHIuOTd/Teste-Front-End-Kratos
+``` 
+companies - "Lista de Empresas, Lista de Documentos, etc..." 
+company  - "Endereço, Nome, CNPJ, etc..." 
+``` 
 
-Os dados para consulta estão disponíveis na api:
+</li> 
+<li> <b>View</b> 
 
-API Perfil do cliente:
-https://5c0e8a20e1498a001336489e.mockapi.io/api/:endpoint
+-> [src/views](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/views "src/views")
 
-GET /empresas
+• <b>Telas</b>
 
-GET /empresas/:id
+```
+CompaniesList - A lista das empresas
+Company - Dashboard da empresa selecionada
+Companies - Tela raiz do módulo de empresas
+```
 
-GET /empresas/:id/documentos
+</li>
+<li> <b>Controller</b>
 
-GET /empresas/:id/documentos/:id
+-> [src/config/router](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/router "src/config/router").
 
-E o design no documento do figma: https://www.figma.com/file/RVoviOrwjK3Vhp96aIHIuOTd/Teste-Front-End-Kratos?node-id=1%3A2
+• <b>Rotas</b> <i>Vue Router</i>
 
-## Como devo entregar o desafio?
-* Crie uma branch a partir da branch master deste respositório;
-* Implemente o desafio de código;
-* Faça um push de sua branch com o desafio implementado;
-* Crie um pull request para branch master;
+```
+'/companies' - Rota raiz da aplicação
+	|
+	|
+	----> '/' - Lista de Empresas
+	|
+	|
+	----> '/companies/:id' - Dashboard da empresa selecionada
+```
 
-Boa Sorte! o/
+</li>
+</ol>
+
+### Componentes
+
+• Para efeitos de escalabilidade os componentes foram modularizados em :
+```
+Companies
+Documents
+Templates
+```
+-> [src/components](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/components "src/components")
+
+### Estilos 
+<i>Scss</i>
+• O arquivo de variáveis de estilo é carregado via [vue.config.js](https://github.com/Thrashattack/test-frontend/blob/teste-carlos-cunha/vue.config.js) através do css loader
+
+-> [src/config/scss](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/scss "src/config/scss")
+
+> Todos os valores foram obtidos no figma disponibilizado junto com o teste, exceto tamanhos padrão de dispositivos.
+
+• Bootstrap e Fontsawesome carregados diretamente no [main.js](https://github.com/Thrashattack/test-frontend/blob/teste-carlos-cunha/src/main.js "main.js")
+
+-> [src/config/bootstrap/bootstrap.js](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/bootstrap/bootstrap.js "src/config/bootstrap/boostrap.js")
+
+-> [src/config/fontawesome/fontawesome.js](https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/fontawesome/fontawesome.js "src/config/fontawesome/fontawesome.js")
+
+> O pacote de icones utilizado é o FAS (FontAwesome Solid). Não foi possível obter gratuitamente o pacote FAL (FontAwesome Light) como proposto no figma.
+
+
+
+[kratosfrontend]: https://github.com/somoskratos/test-frontend "kratos frontend"
+[src/config/store]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/store "src/config/store"
+[src/views]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/views "src/views"
+[src/config/router]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/router "src/config/router"
+[src/config/scss]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/scss "src/config/scss"
+[vue.config.js]: https://github.com/Thrashattack/test-frontend/blob/teste-carlos-cunha/vue.config.js "vue.config.js"
+[main.js]: https://github.com/Thrashattack/test-frontend/blob/teste-carlos-cunha/src/main.js "main.js"
+[src/config/bootstrap/bootstrap.js]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/bootstrap/bootstrap.js "src/config/bootstrap/boostrap.js"
+[src/config/fontawesome/fontawesome.js]: https://github.com/Thrashattack/test-frontend/tree/teste-carlos-cunha/src/config/fontawesome/fontawesome.js "src/config/fontawesome/fontawesome.js"
+

@@ -1,0 +1,78 @@
+<template>
+  <div class="d-flex row justify-content-center align-items-center">
+    <span class="title col-10 text-center mt-5 mb-3">Suas Empresas</span>
+    <span
+      class="subtitle col-10 text-center mb-5"
+    >Clique em uma de suas empresas para acessar seu perfil no Contador Online</span>
+    <div
+      v-for="(CompaniesSubList, index) in getCompaniesList"
+      :key="index"
+      class="col-12 col-lg-8 d-flex justify-content-center align-items-center flex-wrap"
+    >
+      <div class="col-12 col-md-6 d-flex justif-content-center align-items-center flex-wrap">
+        <CompanyWidget
+          class="compact col-12"
+          :title="CompaniesSubList[0].nomeFantasia"
+          :id="CompaniesSubList[0].id"
+          :imgSrc="CompaniesSubList[0].logo"
+        />
+        <CompanyWidget
+          class="compact col-12"
+          :title="CompaniesSubList[1].nomeFantasia"
+          :id="CompaniesSubList[1].id"
+          :imgSrc="CompaniesSubList[1].logo"
+        />
+      </div>
+      <div class="col-12 col-md-6 d-flex flex-row">
+        <CompanyWidget
+          class="extended col-12"
+          :title="CompaniesSubList[2].nomeFantasia"
+          :id="CompaniesSubList[2].id"
+          :imgSrc="CompaniesSubList[2].logo"
+        />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import CompanyWidget from "@/components/companies/CompanyWidget";
+import { mapGetters, mapActions } from "vuex";
+
+export default {
+  name: "CompaniesList",
+  components: { CompanyWidget },
+  computed: {
+    ...mapGetters("companies", ["getCompaniesList"])
+  },
+  methods: {
+    ...mapActions("companies", ["fetchCompanies"])
+  },
+  mounted() {
+    this.fetchCompanies();
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.compact {
+  height: $widget-md;
+}
+
+.extended {
+  height: $widget-lg;
+}
+@media (max-width: $phones) {
+  .extended {
+    height: $widget-md;
+  }
+}
+.title {
+  font-size: $font-title;
+  color: $text-primary;
+}
+.subtitle {
+  font-size: $font-subtitle;
+  color: $text-secondary;
+}
+</style>
